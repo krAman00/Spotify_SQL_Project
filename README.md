@@ -1,5 +1,6 @@
-# Spotify Advanced SQL Project and Query Optimization P-6
-Project Category: Advanced
+# Spotify Advanced SQL Project and Query Optimization
+Project Category: **Advanced**
+
 [Click Here to get Dataset](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset)
 
 ![Spotify Logo](https://github.com/krAman00/Spotify_SQL_Project/blob/main/2024-spotify-brand-assets-media-kit.jpg)
@@ -66,7 +67,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
   
 ---
 
-## 15 Practice Questions
+## 15 Questions With Solution
 
 ### Beginner Level
 1. Retrieve the names of all tracks that have more than 1 billion streams.
@@ -167,9 +168,9 @@ streamed_on_spotify <> 0
 ``` SQL
  WITH artist_ranking AS 
 (SELECT artist,
- 		track,
-		SUM(VIEWS) AS total_views ,
-		DENSE_RANK () OVER(PARTITION BY artist ORDER BY SUM(views) DESC) AS RANK
+        track,
+        SUM(VIEWS) AS total_views ,
+        DENSE_RANK () OVER(PARTITION BY artist ORDER BY SUM(views) DESC) AS RANK
  FROM spotify
  GROUP BY 1 , 2
  ORDER BY 1 , 3 DESC)
