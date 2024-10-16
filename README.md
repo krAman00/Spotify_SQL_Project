@@ -5,7 +5,7 @@ Project Category: Advanced
 ![Spotify Logo](https://github.com/najirh/najirh-Spotify-Data-Analysis-using-SQL/blob/main/spotify_logo.jpg)
 
 ## Overview
-This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
+This project analyzes a Spotify dataset with various attributes about tracks, albums, and artists using SQL. It covers the end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The project's primary goals are to practice advanced SQL skills and generate valuable insights from the dataset.
 
 ```sql
 -- create table
@@ -68,14 +68,20 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 
 ## 15 Practice Questions
 
-### Easy Level
+### Beginner Level
 1. Retrieve the names of all tracks that have more than 1 billion streams.
+``` SQL
+SELECT * FROM spotify
+WHERE stream > 1000000000;
+
+```
+
 2. List all albums along with their respective artists.
 3. Get the total number of comments for tracks where `licensed = TRUE`.
 4. Find all tracks that belong to the album type `single`.
 5. Count the total number of tracks by each artist.
 
-### Medium Level
+### Moderate Level
 1. Calculate the average danceability of tracks in each album.
 2. Find the top 5 tracks with the highest energy values.
 3. List all tracks along with their views and likes where `official_video = TRUE`.
